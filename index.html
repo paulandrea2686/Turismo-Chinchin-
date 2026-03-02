@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turismo en Chinchiná</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Chinchina_Caldas.jpg');
+    background-size:cover;
+    background-position:center;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+header h1{
+    font-size:3.5em;
+}
+
+header p{
+    font-size:1.2em;
+    margin:15px 0;
+}
+
+.btn{
+    background:#2e7d32;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1b5e20;
+    transform:scale(1.05);
+}
+
+nav{
+    background:#1b5e20;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    padding:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#2e7d32;
+}
+
+section{
+    padding:60px 10%;
+    animation:fadeIn 1s ease-in;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#1b5e20;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+ul{
+    list-style:none;
+    text-align:center;
+}
+
+ul li{
+    margin:10px 0;
+    font-size:1.1em;
+}
+
+iframe{
+    width:100%;
+    height:350px;
+    border-radius:15px;
+}
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.2em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Descubre Chinchiná ☕</h1>
+    <p>Corazón del Paisaje Cultural Cafetero</p>
+    <button class="btn" onclick="document.getElementById('historia').scrollIntoView()">Explorar</button>
+</header>
+
+<nav>
+    <a href="#historia">Historia</a>
+    <a href="#atracciones">Atracciones</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#gastronomia">Gastronomía</a>
+    <a href="#hoteles">Hoteles</a>
+    <a href="#mapa">Ubicación</a>
+</nav>
+
+<section id="historia">
+    <h2>Historia y Clima</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+    Chinchiná es un municipio del departamento de Caldas, reconocido por su tradición cafetera.
+    Su nombre significa “Río de Oro”. Posee un clima templado entre 18°C y 24°C,
+    ideal para el cultivo del café y el turismo ecológico.
+    </p>
+</section>
+
+<section id="atracciones">
+    <h2>Atracciones Turísticas</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Cafe_colombiano.jpg">
+            <h3>Ruta Cafetera</h3>
+            <p>Recorridos por fincas cafeteras y degustaciones.</p>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Rio_Cameguadua.jpg">
+            <h3>Malecón Cameguadua</h3>
+            <p>Espacio natural para disfrutar del paisaje.</p>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Basilica_Chinchina.jpg">
+            <h3>Basílica</h3>
+            <p>Templo histórico en el parque principal.</p>
+        </div>
+    </div>
+</section>
+
+<section id="eventos">
+    <h2>Eventos</h2>
+    <ul>
+        <li>🎉 Carnavales del Café</li>
+        <li>🎭 Festivales culturales</li>
+        <li>🎶 Conciertos y actividades locales</li>
+    </ul>
+</section>
+
+<section id="gastronomia">
+    <h2>Gastronomía</h2>
+    <ul>
+        <li>🥘 Bandeja Paisa</li>
+        <li>☕ Café de Especialidad</li>
+        <li>🍲 Sancocho Tradicional</li>
+    </ul>
+</section>
+
+<section id="hoteles">
+    <h2>Hoteles</h2>
+    <ul>
+        <li>Hotel Victoria</li>
+        <li>Hotel Chinchiná Plaza</li>
+        <li>Hacienda Guayabal</li>
+        <li>Finca Hotel Villa Clara</li>
+        <li>Hacienda Cafetera La Gaviota</li>
+    </ul>
+</section>
+
+<section id="mapa">
+    <h2>Ubicación</h2>
+    <iframe src="https://www.google.com/maps?q=Chinchiná,Caldas,Colombia&output=embed"></iframe>
+</section>
+
+<footer>
+    <p>Proyecto Escolar - Turismo en Chinchiná © 2026</p>
+</footer>
+
+</body>
+</html>
